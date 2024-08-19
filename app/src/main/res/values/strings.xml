@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PlacarPDM</string>
+    <string-array name="sportsArray">
+        <item>Futebol</item>
+        <item>Volei</item>
+        <item>Basquete</item>
+    </string-array>
+</resources>
