@@ -1,0 +1,15 @@
+<!-- File: res/drawable/two_color_shape.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="0dp" android:bottom="0dp">
+        <shape>
+            <solid android:color="#0093D1"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+    <item android:top="0dp" android:bottom="3dp">
+        <shape>
+            <solid android:color="#00B2FF"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</layer-list>

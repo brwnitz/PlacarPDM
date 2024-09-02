@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.placarpdm.R
 import com.example.placarpdm.models.Futebol
@@ -15,8 +16,6 @@ class HistoryAdapter(private val historyList: ArrayList<Futebol>) : RecyclerView
         val awayTeamTv: TextView = itemView.findViewById(R.id.tvOutHistory)
         val homeScoreTv: TextView = itemView.findViewById(R.id.tvHomePoints)
         val awayScoreTv: TextView = itemView.findViewById(R.id.tvOutPoints)
-        val ivHomeTeam: ImageView = itemView.findViewById(R.id.ivHomeHistory)
-        val ivAwayTeam: ImageView = itemView.findViewById(R.id.ivOutHistory)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
@@ -31,10 +30,10 @@ class HistoryAdapter(private val historyList: ArrayList<Futebol>) : RecyclerView
         holder.homeScoreTv.text = futebol.placarCasa.toString()
         holder.awayScoreTv.text = futebol.placarVisitante.toString()
         if (futebol.ganhador.equals(futebol.timeCasa)){
-            holder.ivHomeTeam.visibility = View.VISIBLE
+            holder.homeTeamTv.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.winner))
         }
         else if (futebol.ganhador.equals(futebol.timeVisitante)){
-            holder.ivAwayTeam.visibility = View.VISIBLE
+            holder.homeTeamTv.setTextColor(ContextCompat.getColor(holder.itemView.context, R.color.winner))
         }
     }
 
