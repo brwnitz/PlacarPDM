@@ -13,9 +13,12 @@
         android:theme="@style/Theme.PlacarPDM"
         tools:targetApi="31">
         <activity
-            android:name=".views.CounterActivity"
-            android:screenOrientation="landscape"
+            android:name=".views.HistoryActivity"
             android:exported="false" />
+        <activity
+            android:name=".views.CounterActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".views.ConfigurationActivity"
             android:exported="false" />

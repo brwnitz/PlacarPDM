@@ -3,6 +3,7 @@ package com.example.placarpdm.models
 import java.io.Serializable
 
 class Futebol(val timeCasa: String, val timeVisitante: String, var tempoPartida: Int): Serializable {
+
     var placarCasa: Int = 0
     var placarVisitante: Int = 0
     var ganhador: String?= null
